@@ -46,16 +46,17 @@
                   <div class="contact">
                   <div class="contact_border">
                   <p>We're happy to help ! Please fill out the form below.</p>
-                  <form id="frm1">
-                  First name* <input type="text" name="fname" value=""><br><br>
-                  Last name* <input type="text" name="lname" value=""><br><br>
-                  Your Email* <input type="text" name="lname" value=""><br><br>
-                  Your Phone No <input type="text" name="lname" value=""><br><br>
-                 <input type="checkbox" value=" " > keep me updated on special offers, coupons and promotions from chapmans !<br><br>
-                  <button type="button" class="submit">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
-                  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
-                   </svg>Submit</button>
+                  <form action="/" method="post">
+                    <p>Name *</p>
+                    <input type="text" name="yourName" value="" required="required">
+                    <p>Email *</p>
+                    <input type="email" name="youremail" value="" required="required">
+                    <p>Phone No *</p>
+                    <input type="number" name="phoneno" value="" required="required" min="10">
+                    <p>Your message *</p>
+                    <textarea name="text" rows="4" cols="23" required="required"></textarea><br>
+                    <input type="checkbox" value=" " required="required"> keep me updated on special offers, coupons and promotions from chapmans !<br><br>
+                    <input type="Submit" value="submit">
                   </form> 
                   </div>
                   </div>
