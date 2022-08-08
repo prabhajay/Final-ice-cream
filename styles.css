@@ -56,13 +56,18 @@ h2{
 
     font-size: 35px;
 }
-.row{
+.contact_bg{
     background-image: url(./images/contact_bg4.jpg);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover;
   
 }
+.footer{
+    text-align: center;
+    border-top: 1px solid;
+}
+
 /*.border{
     border-radius: 20px;
     height:9px;
