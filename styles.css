@@ -5,11 +5,28 @@ font-family: 'Montserrat';
 }
 .btn{
     background-color: #F10086;
-
 }
-body{
-    font-family: 'Montserrat';
-       font-family: 'Roboto Mono', monospace;
+
+.contact_border{
+    text-align: center;
+    border-radius: 15px;
+    border:1px solid;
+    margin-top: 50px;
+    margin-left:200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    word-spacing: 1.5px;
+    font-size: 20px;
+    color:#F10086;
+}
+
+.contact{
+    width: 750px;
+   height:750px;
 }
 .logo_img{
     height:150px;
@@ -23,8 +40,8 @@ body{
 }
 body
 {
-
     font-family: "Motsterrat";
+    
 }
 .container-fluid{
 
@@ -39,6 +56,13 @@ h2{
 
     font-size: 35px;
 }
+.row{
+    background-image: url(./images/contact_bg4.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover;
+  
+}
 /*.border{
     border-radius: 20px;
     height:9px;
@@ -47,10 +71,19 @@ h2{
     border-style: solid;
     position:absolute;
 }*/
+.submit{
+    color:#F10086;
+}
 .img-fluid{
     height:600px;
     width:600px;
 }
+.title_image{
+    padding-top: 20%;
+    width:150%;
+    height:100%
+    /*transform:rotate(25deg);*/
+    }
 h1{
     font-family: "Montserrat-Black";
     font-size:3.5rem;
