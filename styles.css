@@ -3,9 +3,7 @@
 border-bottom: 2px solid;
 font-family: 'Montserrat';
 }
-.btn{
-    background-color: #F10086;
-}
+
 
 .contact_border{
     text-align: center;
@@ -38,6 +36,10 @@ font-family: 'Montserrat';
     background-color: #F10086;
     color:#F10086;
 }
+.order_btn{
+    padding: 20px;
+    margin-left: 300px;
+}
 body
 {
     font-family: "Motsterrat";
@@ -47,13 +49,19 @@ figcaption {
     font-size: 20px;
     color:#F10086;
     font-weight: bolder;
-    padding-left: 70px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding-left: 75px;
     padding: auto;
     margin: 20px;
     text-align: center;
+  }
+  .text{
+    border:none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: normal;
+    background:transparent;
+    font-size: 20px;
   }
   .fl_img{
     display: inline-block;
@@ -63,6 +71,13 @@ figcaption {
     padding-bottom: 20px;
 
   }
+  
+  .order{
+    border:1px solid;
+    display: inline-flex;
+    white-space: nowrap;
+    cursor: pointer;
+  }
 .container-fluid{
     padding: 2% 10%;  
 }
@@ -71,6 +86,13 @@ figcaption {
     height: 200px;
 }
 h2{
+    text-align: center;
+    padding: 2% 10%;
+    color:#F10086;
+    font-family: "Montserrat";
+    font-size: 35px;
+}
+h3{
     padding: 2% 10%;
     color:#F10086;
     font-family: "Montserrat";
@@ -155,15 +177,15 @@ h1{
 }
 .nav-item{
     padding:0 18px;
+}
 
+.nav-item dropdown{
+    color:black;
 }
 .nav-link{
     font-size: 1.2rem;
     font-family: "Montserrat";
-    color: #f10086;
-
-    font-weight: bold;
-
+    color:white;
 }
 .download-button{
 margin:5% 3% 5% 0;
