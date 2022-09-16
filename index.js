@@ -1,28 +1,45 @@
+require('dotenv').config();
 const express=require("express")
 const app=express()
 const bodyparser=require("body-parser")
 const PORT=process.env.PORT || 3000
-const mongoose=require('mongoose')
+const connectDB=require('./db/index.js')
 
-const uri='mongodb+srv://root:admin@cluster0.ikahhmw.mongodb.net/?retryWrites=true&w=majority'
+connectDB();
 
-mongoose.connect(uri,{ 
-  useNewUrlParser:true,
-  useUnifiedToplogy:true
-}).catch(error=>console.log(error))
+app.set("view engine","pug");
 
+app.use(express.static(__dirname+ './public'));
+app.use(express.static(__dirname+ './public'));
 
 app.get("/",(req,res)=>{
-  res.send("welcome to my stroe");
+  res.render("about.pug");
 })
+app.get("/flavours",(req,res)=>{
+  res.render('flavours.pug');
+})
+app.get("/cart",(req,res)=>{
+  res.render('cart.pug');
+})
+
+app.get("/cones",(req,res)=>{
+  res.render('cones.pug');
+})
+app.get("/contact",(req,res)=>{
+  res.render('contact.pug');
+})
+app.get("/order",(req,res)=>{
+  res.render('order.pug');
+})
+app.get("/take-home",(req,res)=>{
+  res.render('take-home.pug');
+})
+
 
 app.listen(3000,()=>{
   console.log("Server is running on port 3000");
 })
 
-app.get("/flavours",(req,res)=>{
-  res.send("welcome to Flavours Page");
-})
 
 /*
 //app.use(bodyparser);

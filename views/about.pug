@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+  head
+    title Tasty Kids Treat
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,600&family=Roboto+Mono:wght@200&display=swap", rel="stylesheet")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor", crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js", integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2", crossorigin="anonymous")
+    link(rel="stylesheet", type="text/css", href="/css/styles.css")
+  body
+    header
+      nav.navbar.navbar-expand-lg.bg-primary
+        .container-fluid
+          img(class="logo_img", src="./images/logo.jpg", alt="logo")
+          a.navbar-brand(href="#") Tasty Kids Treats
+          button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+              li.nav-item
+                a.btn(aria-current="page", href="about") About
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle.btn(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+                  | Our menu
+                ul.dropdown-menu
+                  li
+                    a.dropdown-item(href="flavours") Flavours
+                  li
+                    a.dropdown-item(href="cones") Cones
+                  li
+                    a.dropdown-item(href="take-home") Take-Home
+                  li
+                    a.dropdown-item(href="scoop") Scoop
+              li.nav-item
+                a.btn(href="order") Order Now
+              li.nav-item
+                a.btn(href="contact") Contact
+    .welcome
+      h2 Welcome to Tasty Kids Treat
+      p(class="about_p")
+        | Tasty Kids Treats Ice cream was won by taste,
+        | innvation and quality.It&apos;s a difference you can taste.
+        | Which is why we are so loved by fans and continue to make 
+        | new ones? Keeping with the times and changing tastes of customers, 
+        | Tasty Kids Treats Ice cream, as an icecream brand has come a long way.
+        | Fast moving ahead with its path-breaking innovations, strategic roadmap and fruitful partnerships.
+      br
+      br
+      img.img-fluid(alt="...", src="./images/ice-cream1.webp")
+    .card-footer
+      small.text-muted Copyright  © Tasty Kids Treats.2022. All Rights Reserrved.
+    script(src="/main.js")

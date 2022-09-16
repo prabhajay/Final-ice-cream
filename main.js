@@ -119,6 +119,25 @@ function totalCost(product)
 
         }
 }
+function increaseValue() 
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<10){
+        value++;
+            document.getElementById('number').value = value;
+    }
+}
+  
+  
+  function decreaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+            document.getElementById('number').value = value;
+  }
+}
 function displayCart(){
     let cartItems = localStorage.getItem("productsInCart");
     let cartCost=localStorage.getItem('totalCost');
@@ -130,31 +149,66 @@ function displayCart(){
     if(cartItems && productContainer){
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
-            productContainer.innerHTML += 
-            `<div class="products">
+            productContainer.innerHTML +=
+            `<div class="product">
+            <div>
+            <input type="checkbox"  value="">
+            <img src="./images/cone/${item.tag}.jpg">
+            ${item.name}</div>
+            <div class="price">${item.price}</div>
+            <div class="quantity">${item.inCart}</div>
+            <div class="total">${item.inCart * item.price}
             
-                <img src="./images/cone/${item.tag}.jpg">
-                <span>${item.name}</span>
             </div>
-            <div class="price">${item.price},00</div>
-            <div class="quantity"></div>
-                 <span>${item.inCart}</span>
-             </div>
-            <div class="total">
-                 $${item.inCart * item.price},00
-            </div>
+            </div> 
+            
             `;
         });
+       /* productContainer.innerHTML +=
+        `<div class="product">
+        <div>
+        <img src="./images/${item.tag}.jpg">
+        ${item.name}</div>
+        <div class="price">${item.price}</div>
+        <div class="quantity">${item.inCart}</div>
+        <div class="total">${item.inCart * item.price}
+        </div>
+        </div> 
+          `;*/
+    
         productContainer.innerHTML +=
         `<div class="basketTotalContainer">
         <h4 class="basketTotalTitle">
         Basket Total
         </h4>
         <h4 class="basketTotal">
-        $${cartCost},00
+        $${cartCost}
         </h4></div>
         `;
+
     }
 }
 onLoadCartNumbers();
 displayCart();
+
+/*
+//<div class="order">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>
+ <input class="text" type="text" size="2" value=${item.inCart} >
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+  </svg>
+    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Val">+</div>
+
+</div>
+<form>
+            <input type="button" onclick="decreaseValue()" value="-">
+  <input type="number" id="number" value=${item.inCart} />
+  <input type="button" onclick="increaseValue()" value="+">
+</form>
+            </div>
+            <div class="total">$${item.inCart * item.price}
+            </div>
+*/
