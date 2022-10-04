@@ -6,11 +6,12 @@ const PORT=process.env.PORT || 3000
 const connectDB=require('./db/index.js')
 
 connectDB();
+app.use(express.json());
+app.use(express.static('public'));
 
-app.set("view engine","pug");
+app.set('view engine','pug');
+app.set('views','./views')
 
-app.use(express.static(__dirname+ './public'));
-app.use(express.static(__dirname+ './public'));
 
 app.get("/",(req,res)=>{
   res.render("about.pug");
