@@ -2,6 +2,11 @@ require('dotenv').config();
 const express=require("express")
 const app=express()
 const bodyparser=require("body-parser")
+const {getCone,
+      createCone,
+      updateCone,
+      deleteCone
+    } =require('./controller/cone.controller')
 const PORT=process.env.PORT || 3000
 const connectDB=require('./db/index.js')
 
@@ -12,6 +17,12 @@ app.use(express.static('public'));
 app.set('view engine','pug');
 app.set('views','./views')
 
+app.get('/cones',getCone)
+app.route('/cones')
+.get(getCone)
+.post(createCone)
+.patch(updateCone)
+.delete(deleteCone)
 
 app.get("/",(req,res)=>{
   res.render("about.pug");
