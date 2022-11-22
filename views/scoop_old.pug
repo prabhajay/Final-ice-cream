@@ -40,24 +40,35 @@ html(lang="en")
               li.nav-item
                 a.btn.btn-primary.btn-mg(href="contact") Contact
                 li.nav-item
-                a.btn.btn-primary.btn-mg(href="Cart") cart
+                a.btn.btn-primary.btn-mg(href="cart") Cart
 
-    h2 Take-Home
-    .container
-      .image
-        img(src="./images/cup_cake1.jpg", width="400", height="400", alt="Pre-packed Litre")
-        center
-          h4 Pre-Packed Litre
-          h4 $25
-        a.add-cart.cart1(href="#")  Add Cart
-      .image
-        img(src="./images/cup cake.jpg", width="400", height="400", alt="Pre-packed half litre")
-        center
-          h4 Pre-Packed Half Litre
-          h4 $ 15
-        a.add-cart.cart1(href="#")  Add Cart
-    div
-      p Please note: We do not keep stock, every order is produced fresh for you.
-      script(src="/index.js")
-    .card-footer
-      small.text-muted Copyright  © Tasty Kids Treats.2022. All Rights Reserrved.
+                        h3 Scoops
+                        .container
+                          .image
+                            img(src="./images/one scoop.jpg", width="300", height="300", alt="one scoop")
+                            center
+                              h4 Kids Scoop
+                              h4 $3.5
+                            a.add-cart.cart1(href="#") Add Cart
+                          .image
+                            img(src="./images/two scoop.jpg", width="300", height="300", alt="double scoop")
+                            center
+                              h4 Double Scoop
+                              h4 $5.5
+                            a.add-cart.cart1(href="#") Add Cart
+                          .image
+                            img(src="./images/three scoop.jpg", width="300", height="300", alt="three scoop")
+                            center
+                              h4 Three scoop
+                              h4 $7.5
+                            a.add-cart.cart1(href="#") Add Cart
+                        .order
+                          svg.bi.bi-dash(xmlns="http://www.w3.org/2000/svg", width="30", height="40", fill="currentColor", viewBox="0 0 16 16")
+                            path(d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z")
+                              input#fname.text(type="text", size="2", value="1")
+                              svg.bi.bi-plus(xmlns="http://www.w3.org/2000/svg", width="30", height="40", fill="currentColor", viewBox="0 0 16 16")
+                                path(d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z")
+                                  p Please note: We do not keep stock, every order is produced fresh for you.
+                                  .card-footer
+                                    small.text-muted Copyright  © Tasty Kids Treats.2022. All Rights Reserrved.
+                                  script(src="/index.js")

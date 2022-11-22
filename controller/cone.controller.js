@@ -1,7 +1,7 @@
 const cartdb=require('../models/cone.model');
 
 const getCone=async(req,res)=>{
-    res.send('getCone')
+    res.send("getCone");
 }
 const createCone=async(req,res)=>{
     try{

@@ -17,25 +17,29 @@ app.use(express.static('public'));
 app.set('view engine','pug');
 app.set('views','./views')
 
-app.get('/cones',getCone)
-app.route('/cones')
+/*app.route('/cones')
 .get(getCone)
 .post(createCone)
 .patch(updateCone)
-.delete(deleteCone)
+.delete(deleteCone)*/
 
 app.get("/",(req,res)=>{
   res.render("about.pug");
 })
+app.get("/about",(req,res)=>{
+  res.render('about.pug');
+})
 app.get("/flavours",(req,res)=>{
   res.render('flavours.pug');
 })
-app.get("/cart",(req,res)=>{
-  res.render('cart.pug');
-})
-
 app.get("/cones",(req,res)=>{
   res.render('cones.pug');
+})
+app.get("/scoop",(req,res)=>{
+  res.render('scoop.pug');
+})
+app.get("/cart",(req,res)=>{
+  res.render('cart.pug');
 })
 app.get("/contact",(req,res)=>{
   res.render('contact.pug');
